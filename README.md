@@ -102,6 +102,4 @@ frontend-health-checker/
 ├── index.html
 ├── style.css
 ├── script.js
-├── shield-logo.png
-├── github-logo.png
 └── README.md
