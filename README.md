@@ -36,6 +36,7 @@ This tool helps users find those issues before they publish the project, submit 
 - Multiple `<h1>` tags
 - Empty divs
 - Forms without submit button
+- And many more....
 
 ### CSS Checks
 
@@ -48,6 +49,7 @@ This tool helps users find those issues before they publish the project, submit 
 - Fixed height issues
 - Overuse of `px`
 - Missing hover/focus styles
+- ANd many more....
 
 ## Tech Stack
 
