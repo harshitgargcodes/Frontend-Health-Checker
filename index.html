@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frontend Health Checker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-area">
+      <img src="shield-logo.png" alt="Frontend Health Checker Logo" class="logo-img">
+      <h2>Frontend Health Checker</h2>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+    </nav>
+
+    <a href="https://github.com/harshitgargcodes/Frontend-Health-Checker" target="_blank" rel="noopener noreferrer" class="github-button">
+      <img src="github-logo.png" alt="GitHub Logo" class="github-img">
+      <span>GitHub</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="head">
+      <div>
+        <h1>Check if your HTML and CSS project is client-ready.</h1>
+        <p>Paste your code, run the health check, and get instant suggestions to improve your project.</p>
+      </div>
+
+      <div class="speciality">
+        <span>Free V1</span>
+        <span>HTML & CSS Checker</span>
+      </div>
+
+        <div class="checks">
+          <span>
+           <img src="best-practices-logo.png" alt="" class="check-icon">
+            Best Practices
+          </span>
+
+          <span>
+           <img src="performance-logo.png" alt="" class="check-icon">
+            Performance
+         </span>
+
+         <span>
+          <img src="accessibility-logo.png" alt="" class="check-icon">
+           Accessibility
+         </span>
+
+        <span>
+         <img src="code-quality-logo.png" alt="" class="check-icon">
+         Code Quality
+       </span>
+     </div>
+    </section>
+
+    <section class="input-box">
+  <div class="html-input">
+    <div class="input-title">
+      <img src="html-logo.png" alt="HTML logo" class="input-logo">
+      <label for="html-code">HTML</label>
+    </div>
+
+    <textarea id="html-code" placeholder="Enter your HTML code here"></textarea>
+  </div>
+
+  <div class="css-input">
+    <div class="input-title">
+      <img src="css-logo.png" alt="CSS logo" class="input-logo">
+      <label for="css-code">CSS</label>
+    </div>
+
+    <textarea id="css-code" placeholder="Enter your CSS code here"></textarea>
+  </div>
+
+  <div>
+    <button type="button" class="health-check">Run Health Check</button>
+    <button type="button" class="sample">Load Sample</button>
+
+    <p>Your code is checked locally in this page and is not uploaded.</p>
+  </div>
+</section>
+
+    <aside class="results-page">
+        <h3>Results</h3>
+        <h2 class="total-score"></h2>
+        <span>/100</span>
+          
+        <div>
+           <h4 class="statusTitle"></h4>
+          <p class="statusMessage"></p>
+        </div>
+
+          <h3>Issues Found</h3>
+          <h3 class="total-issues"></h3>
+
+          <details>
+
+            <summary>
+              <span>View Full Report</span>
+              <span class="total-issues"></span>
+              <span>Issues Found</span>
+            </summary>
+
+            <div class="issue-details">
+
+            </div>
+
+          </details>
+
+          <button type="button" class="copy-report">Copy Report</button>
+          <p class="copy-status"></p>
+    </aside>
+
+    <section class="separate-result">
+  <div class="best-practice-score">
+    <img src="best-practices-logo.png" alt="" class="score-icon">
+    <div>
+      <h4>Best Practices</h4>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="performance-score">
+    <img src="performance-logo.png" alt="" class="score-icon">
+    <div>
+      <h4>Performance</h4>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="accessibility-score">
+    <img src="accessibility-logo.png" alt="" class="score-icon">
+    <div>
+      <h4>Accessibility</h4>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="code-quality-score">
+    <img src="code-quality-logo.png" alt="" class="score-icon">
+    <div>
+      <h4>Code Quality</h4>
+      <p></p>
+    </div>
+  </div>
+</section>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
