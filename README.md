@@ -67,6 +67,10 @@ This tool is useful for:
 - HTML/CSS learners
 - People preparing projects for clients or college submissions
 
+## Netlify Link
+
+frontend-health-checker.netlify.app
+
 ## Folder Structure
 
 ```text
@@ -76,7 +80,3 @@ frontend-health-checker/
 ├── style.css
 ├── script.js
 └── README.md
-
-## Netlify Link
-
-frontend-health-checker.netlify.app
