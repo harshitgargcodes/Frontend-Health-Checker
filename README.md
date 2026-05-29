@@ -22,35 +22,6 @@ This tool helps users find those issues before they publish the project, submit 
 - Load sample code feature
 - Responsive UI
 
-## What it checks
-
-### HTML Checks
-
-- Missing `<title>` tag
-- Missing viewport meta tag
-- Images without `alt` text
-- Empty links
-- Buttons without text
-- Inputs without labels
-- Missing `lang` attribute
-- Multiple `<h1>` tags
-- Empty divs
-- Forms without submit button
-- And many more....
-
-### CSS Checks
-
-- Large fixed widths
-- Missing `box-sizing: border-box`
-- No media queries
-- Inline CSS
-- Too many `!important` rules
-- Very large margin or padding
-- Fixed height issues
-- Overuse of `px`
-- Missing hover/focus styles
-- ANd many more....
-
 ## Tech Stack
 
 - HTML
@@ -100,8 +71,12 @@ This tool is useful for:
 
 ```text
 frontend-health-checker/
-│
+├── assets
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
+
+## Netlify Link
+
+frontend-health-checker.netlify.app
