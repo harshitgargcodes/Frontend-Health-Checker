@@ -69,7 +69,7 @@ This tool is useful for:
 
 ## Netlify Link
 
-frontend-health-checker.netlify.app
+Live Demo: https://frontend-health-checker.netlify.app
 
 ## Folder Structure
 
