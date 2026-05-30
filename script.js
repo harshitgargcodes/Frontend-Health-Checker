@@ -271,173 +271,221 @@ cssTextarea.value=
 
 const issueDetails = {
   "missing-doctype": {
-    title: "Missing DOCTYPE",
-    whatIsWrong: "You did not write <!DOCTYPE html> at the top of your HTML file.",
-    whyItMatters: "It tells the browser to use modern HTML rules instead of old rendering modes.",
-    itsUse: "Use it at the very top of every HTML document."
+    title: "Missing DOCTYPE Declaration",
+    category: "HTML Best Practice",
+    priority: "Medium",
+    whatIsWrong: "Your HTML file does not include the <!DOCTYPE html> declaration at the top.",
+    whyItMatters: "The DOCTYPE tells the browser to render the page using modern HTML standards. Without it, some browsers may use older rendering behavior, which can cause layout or styling inconsistencies.",
+    howToFix: "Add <!DOCTYPE html> as the first line of your HTML document."
   },
 
   "missing-lang": {
     title: "Missing Language Attribute",
-    whatIsWrong: "You did not add lang=\"en\" inside the <html> tag.",
-    whyItMatters: "It helps screen readers, browsers, and translation tools understand the language of your page.",
-    itsUse: "Use it to define the main language of your webpage."
+    category: "Accessibility",
+    priority: "Medium",
+    whatIsWrong: "Your <html> tag does not include a language attribute such as lang=\"en\".",
+    whyItMatters: "The language attribute helps screen readers, browsers, search engines, and translation tools understand the main language of the page.",
+    howToFix: "Update your opening <html> tag to include the correct language, for example: <html lang=\"en\">."
   },
 
   "missing-head-title": {
-    title: "Missing Title Tag",
-    whatIsWrong: "Your HTML does not contain a <title> tag.",
-    whyItMatters: "The title appears in the browser tab and helps users understand what the page is about.",
-    itsUse: "Use it inside the <head> section to give your page a clear name."
+    title: "Missing Page Title",
+    category: "HTML Structure",
+    priority: "High",
+    whatIsWrong: "Your HTML document does not include a <title> tag inside the <head> section.",
+    whyItMatters: "The title appears in the browser tab, improves basic SEO, and helps users understand what the page is about.",
+    howToFix: "Add a clear <title> tag inside the <head> section, for example: <title>Frontend Health Checker</title>."
   },
 
   "empty-title": {
-    title: "Empty Title Tag",
-    whatIsWrong: "Your <title> tag exists, but it has no text inside it.",
-    whyItMatters: "An empty title makes the page look unfinished and less professional.",
-    itsUse: "Write a short and clear page title inside the <title> tag."
+    title: "Empty Page Title",
+    category: "HTML Structure",
+    priority: "Medium",
+    whatIsWrong: "Your <title> tag exists, but it does not contain any meaningful text.",
+    whyItMatters: "An empty title makes the page look unfinished and gives users no context in the browser tab.",
+    howToFix: "Write a short, descriptive title inside the <title> tag."
   },
 
   "missing-meta-charset": {
     title: "Missing Charset Meta Tag",
-    whatIsWrong: "You did not add the UTF-8 charset meta tag.",
-    whyItMatters: "It helps the browser display letters, symbols, and special characters correctly.",
-    itsUse: "Use it inside the <head> section to define text encoding."
+    category: "HTML Best Practice",
+    priority: "Medium",
+    whatIsWrong: "Your HTML document does not include the UTF-8 charset meta tag.",
+    whyItMatters: "The charset meta tag helps the browser display text, symbols, and special characters correctly.",
+    howToFix: "Add this inside the <head> section: <meta charset=\"UTF-8\">."
   },
 
   "missing-meta-viewport": {
     title: "Missing Viewport Meta Tag",
-    whatIsWrong: "You did not add the viewport meta tag.",
-    whyItMatters: "Without it, your layout may not display properly on mobile devices.",
-    itsUse: "Use it to make your page responsive on phones, tablets, and desktops."
+    category: "Responsive Design",
+    priority: "High",
+    whatIsWrong: "Your HTML document does not include the viewport meta tag.",
+    whyItMatters: "Without the viewport meta tag, your website may not scale correctly on mobile and tablet screens.",
+    howToFix: "Add this inside the <head> section: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">."
   },
 
   "missing-main": {
-    title: "Missing Main Tag",
-    whatIsWrong: "You did not use a <main> element.",
-    whyItMatters: "It helps separate the main page content from the header, navigation, and footer.",
-    itsUse: "Use <main> to wrap the primary content of your page."
+    title: "Missing Main Landmark",
+    category: "Semantic HTML",
+    priority: "Medium",
+    whatIsWrong: "Your page does not use a <main> element for the primary content.",
+    whyItMatters: "The <main> element helps separate the main content from repeated sections like headers, navigation, and footers. It also improves accessibility and page structure.",
+    howToFix: "Wrap the primary page content inside a <main> element."
   },
 
   "add-h1-heading": {
     title: "Missing H1 Heading",
-    whatIsWrong: "Your page does not have an <h1> heading.",
-    whyItMatters: "The <h1> tells users and search engines the main topic of the page.",
-    itsUse: "Use one clear <h1> for the main heading of the page."
+    category: "HTML Structure",
+    priority: "High",
+    whatIsWrong: "Your page does not contain an <h1> heading.",
+    whyItMatters: "The <h1> heading represents the main topic of the page. It helps users, search engines, and assistive technologies understand the page purpose.",
+    howToFix: "Add one clear <h1> heading that describes the main purpose of the page."
   },
 
   "multiple-h1": {
     title: "Multiple H1 Headings",
-    whatIsWrong: "Your page has more than one <h1> heading.",
-    whyItMatters: "Too many main headings can make the page structure confusing.",
-    itsUse: "Use one main <h1>, then use <h2>, <h3>, and lower headings for sections."
+    category: "HTML Structure",
+    priority: "Medium",
+    whatIsWrong: "Your page contains more than one <h1> heading.",
+    whyItMatters: "Using multiple main headings can make the content structure less clear, especially for beginners and assistive technology users.",
+    howToFix: "Keep one main <h1> for the page title, then use <h2>, <h3>, and lower headings for sections."
   },
 
   "missing-alt": {
     title: "Image Missing Alt Text",
-    whatIsWrong: "One or more images do not have an alt attribute.",
-    whyItMatters: "Alt text helps users understand the image if it does not load or if they use a screen reader.",
-    itsUse: "Use alt text to describe the purpose or meaning of the image."
+    category: "Accessibility",
+    priority: "High",
+    whatIsWrong: "One or more images do not include an alt attribute.",
+    whyItMatters: "Alt text helps screen reader users understand the purpose of an image. It also provides fallback text if the image fails to load.",
+    howToFix: "Add meaningful alt text to important images. For decorative images, use an empty alt attribute like alt=\"\"."
   },
 
   "empty-link": {
-    title: "Empty Link Found",
-    whatIsWrong: "One of your links has an empty href attribute.",
-    whyItMatters: "An empty link does not take the user anywhere and makes the page feel incomplete.",
-    itsUse: "Use a real URL or a valid section ID inside the href attribute."
+    title: "Empty Link Destination",
+    category: "User Experience",
+    priority: "Medium",
+    whatIsWrong: "One or more links have an empty href attribute.",
+    whyItMatters: "Empty links do not guide users anywhere and can make the website feel incomplete or broken.",
+    howToFix: "Replace the empty href value with a valid page URL, external URL, or section ID."
   },
 
   "use-real-link": {
     title: "Placeholder Link Found",
-    whatIsWrong: "You used href=\"#\" in a link.",
-    whyItMatters: "This is usually a temporary placeholder and may confuse users if it does nothing.",
-    itsUse: "Replace # with a real page link or a real section link."
+    category: "User Experience",
+    priority: "Low",
+    whatIsWrong: "One or more links use href=\"#\", which usually means the link is only a placeholder.",
+    whyItMatters: "Placeholder links can confuse users because they look clickable but may not perform a useful action.",
+    howToFix: "Replace # with a real URL, page path, or section ID such as href=\"#contact\"."
   },
 
   "empty-button": {
-    title: "Empty Button Found",
-    whatIsWrong: "A button exists, but it has no visible text inside it.",
-    whyItMatters: "Users need clear button text to understand what action the button performs.",
-    itsUse: "Write clear button text like Submit, Check Project, or Start Health Check."
+    title: "Empty Button Text",
+    category: "Accessibility",
+    priority: "High",
+    whatIsWrong: "A button exists on the page, but it does not contain visible text.",
+    whyItMatters: "Users need clear button text to understand what action will happen. Empty buttons are also problematic for accessibility.",
+    howToFix: "Add clear action text inside the button, such as Submit, Check Project, Contact Us, or Get Started."
   },
 
   "inline-css": {
     title: "Inline CSS Found",
-    whatIsWrong: "You used CSS directly inside the HTML style attribute.",
-    whyItMatters: "Inline CSS makes the code harder to maintain and reuse.",
-    itsUse: "Keep styling inside an external CSS file whenever possible."
+    category: "Code Quality",
+    priority: "Medium",
+    whatIsWrong: "Some styles are written directly inside HTML using the style attribute.",
+    whyItMatters: "Inline CSS makes the code harder to maintain, reuse, and update across multiple elements or pages.",
+    howToFix: "Move repeated or important styles into an external CSS file and apply them using classes."
   },
 
   "missing-border-box": {
     title: "Missing Box-Sizing Reset",
-    whatIsWrong: "You did not add box-sizing: border-box using the universal selector.",
-    whyItMatters: "Without it, padding and borders can increase element size and make layouts harder to control.",
-    itsUse: "Use it to make width and height calculations more predictable in your CSS."
+    category: "CSS Best Practice",
+    priority: "Medium",
+    whatIsWrong: "Your CSS does not include a global box-sizing reset.",
+    whyItMatters: "Without box-sizing: border-box, padding and borders can increase the final size of elements, making layouts harder to control.",
+    howToFix: "Add this reset at the top of your CSS: * { box-sizing: border-box; }."
   },
 
   "missing-margin-0": {
     title: "Missing Body Margin Reset",
-    whatIsWrong: "You did not set margin: 0 on the body.",
-    whyItMatters: "Browsers add default margin to the body, which can create unwanted spacing around your page.",
-    itsUse: "Use body { margin: 0; } to start your layout from the edge of the screen."
+    category: "CSS Best Practice",
+    priority: "Medium",
+    whatIsWrong: "Your CSS does not reset the default body margin.",
+    whyItMatters: "Browsers add default margin to the body, which can create unwanted spacing around the page.",
+    howToFix: "Add this rule to your CSS: body { margin: 0; }."
   },
 
   "missing-font-family": {
     title: "Missing Font Family",
-    whatIsWrong: "You did not define a font-family for the page.",
-    whyItMatters: "Without a font family, the browser uses its default font, which may not match your design.",
-    itsUse: "Use font-family to make your website text look consistent and professional."
+    category: "Visual Consistency",
+    priority: "Low",
+    whatIsWrong: "Your page does not define a font-family.",
+    whyItMatters: "Without a defined font-family, the browser uses its default font, which may not match your intended design.",
+    howToFix: "Add a font-family to the body, for example: body { font-family: Arial, sans-serif; }."
   },
 
   "use-max-width": {
     title: "Large Fixed Width Found",
-    whatIsWrong: "You used a large fixed width value in pixels.",
-    whyItMatters: "Large fixed widths can cause horizontal scrolling or layout overflow on smaller screens.",
-    itsUse: "Use max-width, percentages, or responsive units to make layouts adapt better."
+    category: "Responsive Design",
+    priority: "High",
+    whatIsWrong: "Your CSS uses a large fixed width value in pixels.",
+    whyItMatters: "Large fixed widths can cause horizontal scrolling and layout overflow on smaller screens.",
+    howToFix: "Use width: 100% with max-width instead of only using a fixed width. Example: width: 100%; max-width: 1200px;"
   },
 
   "use-max-height": {
     title: "Large Fixed Height Found",
-    whatIsWrong: "You used a large fixed height value in pixels.",
+    category: "Responsive Design",
+    priority: "Medium",
+    whatIsWrong: "Your CSS uses a large fixed height value in pixels.",
     whyItMatters: "Fixed heights can break layouts when content grows or when the screen size changes.",
-    itsUse: "Use min-height, auto, or flexible spacing instead of forcing large fixed heights."
+    howToFix: "Use min-height, auto height, padding, or flexible layout techniques instead of forcing a large fixed height."
   },
 
   "consider-max-width-100%": {
     title: "Missing max-width: 100%",
-    whatIsWrong: "Your CSS does not include a max-width: 100% rule.",
-    whyItMatters: "Without it, images or large elements may overflow outside their container.",
-    itsUse: "Use max-width: 100% to make images and elements stay inside their parent container."
+    category: "Responsive Design",
+    priority: "Medium",
+    whatIsWrong: "Your CSS does not include a max-width: 100% rule for responsive media or large elements.",
+    whyItMatters: "Images and large elements can overflow outside their containers if they are not constrained properly.",
+    howToFix: "Add a rule such as img { max-width: 100%; height: auto; } to make images responsive."
   },
 
   "overuse-important": {
-    title: "Too Many !important Rules",
-    whatIsWrong: "You used !important too many times.",
-    whyItMatters: "Overusing !important makes CSS harder to override, debug, and maintain.",
-    itsUse: "Use better selectors and CSS structure instead of forcing styles with !important."
+    title: "Overuse of !important",
+    category: "Code Quality",
+    priority: "Medium",
+    whatIsWrong: "Your CSS uses !important too many times.",
+    whyItMatters: "Overusing !important makes CSS harder to override, debug, and maintain as the project grows.",
+    howToFix: "Use cleaner selectors, better class naming, and proper CSS order instead of forcing styles with !important."
   },
 
   "empty-css-rule": {
     title: "Empty CSS Rule Found",
-    whatIsWrong: "You created a CSS selector with no styles inside it.",
-    whyItMatters: "Empty CSS rules add unnecessary code and make the stylesheet look unfinished.",
-    itsUse: "Remove empty rules or add the required styles inside them."
+    category: "Code Quality",
+    priority: "Low",
+    whatIsWrong: "Your stylesheet contains a CSS selector with no styles inside it.",
+    whyItMatters: "Empty CSS rules add unnecessary code and make the stylesheet look unfinished or unclean.",
+    howToFix: "Remove the empty rule or add the required CSS properties inside it."
   },
 
   "consider-hover-effect-button": {
     title: "Missing Hover Effect",
-    whatIsWrong: "Your CSS does not include a :hover effect.",
-    whyItMatters: "Hover effects make buttons and links feel more interactive and polished.",
-    itsUse: "Use :hover to give visual feedback when users move the mouse over interactive elements."
+    category: "User Experience",
+    priority: "Low",
+    whatIsWrong: "Your CSS does not include a hover effect for interactive elements.",
+    whyItMatters: "Hover effects give users visual feedback and make buttons or links feel more polished and interactive.",
+    howToFix: "Add :hover styles for buttons and important links, for example: button:hover { opacity: 0.9; }."
   },
 
   "large-margin": {
     title: "Large Margin Found",
-    whatIsWrong: "You used a very large margin value.",
-    whyItMatters: "Large margins can create too much empty space and break layouts on smaller screens.",
-    itsUse: "Use balanced spacing with smaller margins, padding, gap, or responsive units."
+    category: "Layout Quality", 
+    priority: "Medium",
+    whatIsWrong: "Your CSS uses a very large margin value.",
+    whyItMatters: "Very large margins can create excessive empty space and may break the layout on smaller screens.",
+    howToFix: "Use smaller spacing values, padding, gap, or responsive units to create more balanced spacing."
   }
-};
+ }
 
 let latestReportText="";
 
@@ -475,7 +523,7 @@ ${details.whatIsWrong}
 Why it Matters:
 ${details.whyItMatters}
 
-Its Use:
+How To Fix:
 ${details.itsUse}
 `;
 });
@@ -500,25 +548,37 @@ ${details.itsUse}
     const h4=document.createElement("h4")
     const whatWrong=document.createElement("h5")
     const whyMatters=document.createElement("h5")
-    const itzUse=document.createElement("h5")
+    const howToFix=document.createElement("h5")
     const wrong=document.createElement("p")
     const matters=document.createElement("p")
-    const use=document.createElement("p")
+    const fix=document.createElement("p")
+    const priority=document.createElement("h5")
+    const priorityDetail=document.createElement("p")
+    const category=document.createElement("h5")
+    const categoryDetail=document.createElement("p")
 
     h4.textContent=issueDetails[issue].title
     whatWrong.textContent="What is Wrong:"
     wrong.textContent=issueDetails[issue].whatIsWrong
-    whyMatters.textContent="Why it Matters"
+    whyMatters.textContent="Why it Matters:"
     matters.textContent=issueDetails[issue].whyItMatters
-    itzUse.textContent="Its Use"
-    use.textContent=issueDetails[issue].itsUse
+    howToFix.textContent="How To Fix:"
+    fix.textContent=issueDetails[issue].howToFix
+    priority.textContent="Priority:"
+    priorityDetail.textContent=issueDetails[issue].priority
+    category.textContent="Category:"
+    categoryDetail.textContent=issueDetails[issue].category
     issueDetail.appendChild(h4)
+    issueDetail.appendChild(category)
+    issueDetail.appendChild(categoryDetail)
+    issueDetail.appendChild(priority)
+    issueDetail.appendChild(priorityDetail)
     issueDetail.appendChild(whatWrong)
     issueDetail.appendChild(wrong)
     issueDetail.appendChild(whyMatters)
     issueDetail.appendChild(matters)
-    issueDetail.appendChild(itzUse)
-    issueDetail.appendChild(use)
+    issueDetail.appendChild(howToFix)
+    issueDetail.appendChild(fix)
   })
 
   const totalScore=document.querySelector(".total-score")
@@ -561,5 +621,4 @@ navigator.clipboard.writeText(latestReportText).then(()=>{
   copyStatus.textContent="Could not copy report. Try again.";
 })
 })
-
 
