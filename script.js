@@ -276,7 +276,17 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your HTML file does not include the <!DOCTYPE html> declaration at the top.",
     whyItMatters: "The DOCTYPE tells the browser to render the page using modern HTML standards. Without it, some browsers may use older rendering behavior, which can cause layout or styling inconsistencies.",
-    howToFix: "Add <!DOCTYPE html> as the first line of your HTML document."
+    howToFix: "Add <!DOCTYPE html> as the first line of your HTML document.",
+    correctExample: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Page</title>
+</head>
+<body>
+  <h1>My Website</h1>
+</body>
+</html>`
   },
 
   "missing-lang": {
@@ -285,7 +295,8 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your <html> tag does not include a language attribute such as lang=\"en\".",
     whyItMatters: "The language attribute helps screen readers, browsers, search engines, and translation tools understand the main language of the page.",
-    howToFix: "Update your opening <html> tag to include the correct language, for example: <html lang=\"en\">."
+    howToFix: "Update your opening <html> tag to include the correct language, for example: <html lang=\"en\">.",
+    correctExample: `<html lang="en">`
   },
 
   "missing-head-title": {
@@ -294,7 +305,10 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "Your HTML document does not include a <title> tag inside the <head> section.",
     whyItMatters: "The title appears in the browser tab, improves basic SEO, and helps users understand what the page is about.",
-    howToFix: "Add a clear <title> tag inside the <head> section, for example: <title>Frontend Health Checker</title>."
+    howToFix: "Add a clear <title> tag inside the <head> section, for example: <title>Frontend Health Checker</title>.",
+    correctExample: `<head>
+  <title>Frontend Health Checker</title>
+</head>`
   },
 
   "empty-title": {
@@ -303,7 +317,8 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your <title> tag exists, but it does not contain any meaningful text.",
     whyItMatters: "An empty title makes the page look unfinished and gives users no context in the browser tab.",
-    howToFix: "Write a short, descriptive title inside the <title> tag."
+    howToFix: "Write a short, descriptive title inside the <title> tag.",
+    correctExample: `<title>My Portfolio Website</title>`
   },
 
   "missing-meta-charset": {
@@ -312,7 +327,10 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your HTML document does not include the UTF-8 charset meta tag.",
     whyItMatters: "The charset meta tag helps the browser display text, symbols, and special characters correctly.",
-    howToFix: "Add this inside the <head> section: <meta charset=\"UTF-8\">."
+    howToFix: "Add this inside the <head> section: <meta charset=\"UTF-8\">.",
+    correctExample: `<head>
+  <meta charset="UTF-8">
+</head>`
   },
 
   "missing-meta-viewport": {
@@ -321,7 +339,10 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "Your HTML document does not include the viewport meta tag.",
     whyItMatters: "Without the viewport meta tag, your website may not scale correctly on mobile and tablet screens.",
-    howToFix: "Add this inside the <head> section: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">."
+    howToFix: "Add this inside the <head> section: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">.",
+    correctExample: `<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>`
   },
 
   "missing-main": {
@@ -330,7 +351,21 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your page does not use a <main> element for the primary content.",
     whyItMatters: "The <main> element helps separate the main content from repeated sections like headers, navigation, and footers. It also improves accessibility and page structure.",
-    howToFix: "Wrap the primary page content inside a <main> element."
+    howToFix: "Wrap the primary page content inside a <main> element.",
+    correctExample: `<body>
+  <header>
+    <nav>Navigation links</nav>
+  </header>
+
+  <main>
+    <h1>Frontend Health Checker</h1>
+    <p>Main page content goes here.</p>
+  </main>
+
+  <footer>
+    <p>Footer content</p>
+  </footer>
+</body>`
   },
 
   "add-h1-heading": {
@@ -339,7 +374,8 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "Your page does not contain an <h1> heading.",
     whyItMatters: "The <h1> heading represents the main topic of the page. It helps users, search engines, and assistive technologies understand the page purpose.",
-    howToFix: "Add one clear <h1> heading that describes the main purpose of the page."
+    howToFix: "Add one clear <h1> heading that describes the main purpose of the page.",
+    correctExample: `<h1>Frontend Health Checker</h1>`
   },
 
   "multiple-h1": {
@@ -348,7 +384,16 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your page contains more than one <h1> heading.",
     whyItMatters: "Using multiple main headings can make the content structure less clear, especially for beginners and assistive technology users.",
-    howToFix: "Keep one main <h1> for the page title, then use <h2>, <h3>, and lower headings for sections."
+    howToFix: "Keep one main <h1> for the page title, then use <h2>, <h3>, and lower headings for sections.",
+    correctExample: `<h1>Frontend Health Checker</h1>
+
+<section>
+  <h2>How It Works</h2>
+</section>
+
+<section>
+  <h2>Best Practices</h2>
+</section>`
   },
 
   "missing-alt": {
@@ -357,7 +402,10 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "One or more images do not include an alt attribute.",
     whyItMatters: "Alt text helps screen reader users understand the purpose of an image. It also provides fallback text if the image fails to load.",
-    howToFix: "Add meaningful alt text to important images. For decorative images, use an empty alt attribute like alt=\"\"."
+    howToFix: "Add meaningful alt text to important images. For decorative images, use an empty alt attribute like alt=\"\".",
+    correctExample: `<img src="profile.jpg" alt="Profile photo of the website owner">
+
+<img src="decorative-line.png" alt="">`
   },
 
   "empty-link": {
@@ -366,7 +414,12 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "One or more links have an empty href attribute.",
     whyItMatters: "Empty links do not guide users anywhere and can make the website feel incomplete or broken.",
-    howToFix: "Replace the empty href value with a valid page URL, external URL, or section ID."
+    howToFix: "Replace the empty href value with a valid page URL, external URL, or section ID.",
+    correctExample: `<a href="about.html">About</a>
+
+<a href="#contact">Contact</a>
+
+<a href="https://github.com/username">GitHub</a>`
   },
 
   "use-real-link": {
@@ -375,7 +428,10 @@ const issueDetails = {
     priority: "Low",
     whatIsWrong: "One or more links use href=\"#\", which usually means the link is only a placeholder.",
     whyItMatters: "Placeholder links can confuse users because they look clickable but may not perform a useful action.",
-    howToFix: "Replace # with a real URL, page path, or section ID such as href=\"#contact\"."
+    howToFix: "Replace # with a real URL, page path, or section ID such as href=\"#contact\".",
+    correctExample: `<a href="#features">View Features</a>
+
+<a href="contact.html">Contact Us</a>`
   },
 
   "empty-button": {
@@ -384,7 +440,10 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "A button exists on the page, but it does not contain visible text.",
     whyItMatters: "Users need clear button text to understand what action will happen. Empty buttons are also problematic for accessibility.",
-    howToFix: "Add clear action text inside the button, such as Submit, Check Project, Contact Us, or Get Started."
+    howToFix: "Add clear action text inside the button, such as Submit, Check Project, Contact Us, or Get Started.",
+    correctExample: `<button>Check Project</button>
+
+<button type="submit">Submit</button>`
   },
 
   "inline-css": {
@@ -393,7 +452,18 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Some styles are written directly inside HTML using the style attribute.",
     whyItMatters: "Inline CSS makes the code harder to maintain, reuse, and update across multiple elements or pages.",
-    howToFix: "Move repeated or important styles into an external CSS file and apply them using classes."
+    howToFix: "Move repeated or important styles into an external CSS file and apply them using classes.",
+    correctExample: `<!-- HTML -->
+<button class="primary-btn">Check Project</button>
+
+/* CSS */
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+}`
   },
 
   "missing-border-box": {
@@ -402,7 +472,10 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your CSS does not include a global box-sizing reset.",
     whyItMatters: "Without box-sizing: border-box, padding and borders can increase the final size of elements, making layouts harder to control.",
-    howToFix: "Add this reset at the top of your CSS: * { box-sizing: border-box; }."
+    howToFix: "Add this reset at the top of your CSS: * { box-sizing: border-box; }.",
+    correctExample: `* {
+  box-sizing: border-box;
+}`
   },
 
   "missing-margin-0": {
@@ -411,7 +484,10 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your CSS does not reset the default body margin.",
     whyItMatters: "Browsers add default margin to the body, which can create unwanted spacing around the page.",
-    howToFix: "Add this rule to your CSS: body { margin: 0; }."
+    howToFix: "Add this rule to your CSS: body { margin: 0; }.",
+    correctExample: `body {
+  margin: 0;
+}`
   },
 
   "missing-font-family": {
@@ -420,7 +496,10 @@ const issueDetails = {
     priority: "Low",
     whatIsWrong: "Your page does not define a font-family.",
     whyItMatters: "Without a defined font-family, the browser uses its default font, which may not match your intended design.",
-    howToFix: "Add a font-family to the body, for example: body { font-family: Arial, sans-serif; }."
+    howToFix: "Add a font-family to the body, for example: body { font-family: Arial, sans-serif; }.",
+    correctExample: `body {
+  font-family: Arial, sans-serif;
+}`
   },
 
   "use-max-width": {
@@ -429,7 +508,12 @@ const issueDetails = {
     priority: "High",
     whatIsWrong: "Your CSS uses a large fixed width value in pixels.",
     whyItMatters: "Large fixed widths can cause horizontal scrolling and layout overflow on smaller screens.",
-    howToFix: "Use width: 100% with max-width instead of only using a fixed width. Example: width: 100%; max-width: 1200px;"
+    howToFix: "Use width: 100% with max-width instead of only using a fixed width. Example: width: 100%; max-width: 1200px;",
+    correctExample: `.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}`
   },
 
   "use-max-height": {
@@ -438,7 +522,11 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your CSS uses a large fixed height value in pixels.",
     whyItMatters: "Fixed heights can break layouts when content grows or when the screen size changes.",
-    howToFix: "Use min-height, auto height, padding, or flexible layout techniques instead of forcing a large fixed height."
+    howToFix: "Use min-height, auto height, padding, or flexible layout techniques instead of forcing a large fixed height.",
+    correctExample: `.hero {
+  min-height: 500px;
+  padding: 80px 20px;
+}`
   },
 
   "consider-max-width-100%": {
@@ -447,7 +535,12 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your CSS does not include a max-width: 100% rule for responsive media or large elements.",
     whyItMatters: "Images and large elements can overflow outside their containers if they are not constrained properly.",
-    howToFix: "Add a rule such as img { max-width: 100%; height: auto; } to make images responsive."
+    howToFix: "Add a rule such as img { max-width: 100%; height: auto; } to make images responsive.",
+    correctExample: `img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}`
   },
 
   "overuse-important": {
@@ -456,7 +549,14 @@ const issueDetails = {
     priority: "Medium",
     whatIsWrong: "Your CSS uses !important too many times.",
     whyItMatters: "Overusing !important makes CSS harder to override, debug, and maintain as the project grows.",
-    howToFix: "Use cleaner selectors, better class naming, and proper CSS order instead of forcing styles with !important."
+    howToFix: "Use cleaner selectors, better class naming, and proper CSS order instead of forcing styles with !important.",
+    correctExample: `.primary-btn {
+  background-color: #2563eb;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+}`
   },
 
   "empty-css-rule": {
@@ -465,7 +565,12 @@ const issueDetails = {
     priority: "Low",
     whatIsWrong: "Your stylesheet contains a CSS selector with no styles inside it.",
     whyItMatters: "Empty CSS rules add unnecessary code and make the stylesheet look unfinished or unclean.",
-    howToFix: "Remove the empty rule or add the required CSS properties inside it."
+    howToFix: "Remove the empty rule or add the required CSS properties inside it.",
+    correctExample: `.card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+}`
   },
 
   "consider-hover-effect-button": {
@@ -474,18 +579,91 @@ const issueDetails = {
     priority: "Low",
     whatIsWrong: "Your CSS does not include a hover effect for interactive elements.",
     whyItMatters: "Hover effects give users visual feedback and make buttons or links feel more polished and interactive.",
-    howToFix: "Add :hover styles for buttons and important links, for example: button:hover { opacity: 0.9; }."
+    howToFix: "Add :hover styles for buttons and important links, for example: button:hover { opacity: 0.9; }.",
+    correctExample: `button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}`
   },
 
   "large-margin": {
     title: "Large Margin Found",
-    category: "Layout Quality", 
+    category: "Layout Quality",
     priority: "Medium",
     whatIsWrong: "Your CSS uses a very large margin value.",
     whyItMatters: "Very large margins can create excessive empty space and may break the layout on smaller screens.",
-    howToFix: "Use smaller spacing values, padding, gap, or responsive units to create more balanced spacing."
+    howToFix: "Use smaller spacing values, padding, gap, or responsive units to create more balanced spacing.",
+    correctExample: `.section {
+  padding: 60px 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 24px;
+}`
   }
- }
+};
+
+function escapeHTML(code) {
+  if (!code) return "";
+
+  return code
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function createPdfReport(score, detectedIssues) {
+  document.querySelector(".pdf-total-score").textContent = score.totalScore;
+
+  document.querySelector(".pdf-best-practices-score").textContent = score.bestPracticesScore + "/100";
+  document.querySelector(".pdf-performance-score").textContent = score.performanceScore + "/100";
+  document.querySelector(".pdf-accessibility-score").textContent = score.accessibilityScore + "/100";
+  document.querySelector(".pdf-code-quality-score").textContent = score.codeQualityScore + "/100";
+
+  document.querySelector(".pdf-total-issues").textContent = detectedIssues.length;
+
+  document.querySelector(".pdf-status-title").textContent = document.querySelector(".statusTitle").textContent;
+  document.querySelector(".pdf-status-message").textContent = document.querySelector(".statusMessage").textContent;
+
+  const pdfIssueDetails = document.querySelector(".pdf-issue-details");
+  pdfIssueDetails.innerHTML = "";
+
+  detectedIssues.forEach(issue => {
+    const details = issueDetails[issue];
+
+    if (!details) return;
+
+    pdfIssueDetails.innerHTML += `
+      <div class="pdf-issue-card">
+        <h3>${escapeHTML(details.title)}</h3>
+
+        <h4>Category:</h4>
+        <p>${escapeHTML(details.category)}</p>
+
+        <h4>Priority:</h4>
+        <p>${escapeHTML(details.priority)}</p>
+
+        <h4>What is Wrong:</h4>
+        <p>${escapeHTML(details.whatIsWrong)}</p>
+
+        <h4>Why it Matters:</h4>
+        <p>${escapeHTML(details.whyItMatters)}</p>
+
+        <h4>How To Fix:</h4>
+        <p>${escapeHTML(details.howToFix)}</p>
+
+        <h4>Correct Example:</h4>
+        <pre>${escapeHTML(details.correctExample)}</pre>
+      </div>
+    `;
+  });
+}
+
 
 let latestReportText="";
 
@@ -524,12 +702,14 @@ Why it Matters:
 ${details.whyItMatters}
 
 How To Fix:
-${details.itsUse}
+${details.howToFix}
 `;
 });
-  const totalIssues=document.querySelectorAll(".total-issues")
-  totalIssues.textContent=detectedIssues.length
+  const totalIssues = document.querySelectorAll(".total-issues");
 
+totalIssues.forEach(item => {
+  item.textContent = detectedIssues.length;
+});
   const bestPracticeScore=document.querySelector(".best-practice-score p");
   const performanceScore=document.querySelector(".performance-score p");
   const accessibilityScore=document.querySelector(".accessibility-score p");
@@ -556,6 +736,8 @@ ${details.itsUse}
     const priorityDetail=document.createElement("p")
     const category=document.createElement("h5")
     const categoryDetail=document.createElement("p")
+    const correctExample=document.createElement("h5")
+    const example=document.createElement("p")
 
     h4.textContent=issueDetails[issue].title
     whatWrong.textContent="What is Wrong:"
@@ -568,6 +750,9 @@ ${details.itsUse}
     priorityDetail.textContent=issueDetails[issue].priority
     category.textContent="Category:"
     categoryDetail.textContent=issueDetails[issue].category
+    correctExample.textContent="Correct Example:"
+    example.textContent=issueDetails[issue].correctExample
+
     issueDetail.appendChild(h4)
     issueDetail.appendChild(category)
     issueDetail.appendChild(categoryDetail)
@@ -579,6 +764,8 @@ ${details.itsUse}
     issueDetail.appendChild(matters)
     issueDetail.appendChild(howToFix)
     issueDetail.appendChild(fix)
+    issueDetail.appendChild(correctExample)
+    issueDetail.appendChild(example)
   })
 
   const totalScore=document.querySelector(".total-score")
@@ -606,6 +793,7 @@ ${details.itsUse}
     statusTitle.textContent="Needs improvement"
     statusMessage.textContent="Your project has several important issues. Fix the main problems before sharing it.";
   }
+    createPdfReport(score, detectedIssues);
 })
 
 const copyReport=document.querySelector(".copy-report")
@@ -620,5 +808,58 @@ navigator.clipboard.writeText(latestReportText).then(()=>{
   }).catch(()=>{
   copyStatus.textContent="Could not copy report. Try again.";
 })
+})
+
+
+const downloadPdf = document.querySelector(".download-pdf");
+
+downloadPdf.addEventListener("click", () => {
+  const pdfWrapper = document.querySelector(".pdf-only-report");
+  const pdfCard = document.querySelector(".pdf-report-card");
+
+  if (latestReportText === "") {
+    alert("Please run the health check first.");
+    return;
+  }
+
+  pdfWrapper.classList.add("pdf-active");
+
+  setTimeout(() => {
+    const pxToMm = 0.264583;
+
+    const contentWidthPx = pdfCard.scrollWidth;
+    const contentHeightPx = pdfCard.scrollHeight;
+
+    const pdfWidthMm = contentWidthPx * pxToMm;
+    const pdfHeightMm = contentHeightPx * pxToMm;
+
+    const options = {
+      margin: 0,
+      filename: "frontend-health-check-report.pdf",
+      image: {
+        type: "jpeg",
+        quality: 0.98
+      },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        scrollY: 0
+      },
+      jsPDF: {
+        unit: "mm",
+        format: [pdfWidthMm, pdfHeightMm],
+        orientation: "portrait"
+      }
+    };
+
+    html2pdf()
+      .set(options)
+      .from(pdfCard)
+      .save()
+      .then(() => {
+        pdfWrapper.classList.remove("pdf-active");
+      });
+  }, 300);
+});
 })
 
