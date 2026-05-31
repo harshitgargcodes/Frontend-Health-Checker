@@ -10,13 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
- 
 </head>
+
 <body>
 
   <header class="header">
     <div class="logo-area">
-      <img src="assets/shield-logo.png" alt="Frontend Health Checker Logo" class="logo-img">
+      <img src="shield-logo.png" alt="Frontend Health Checker Logo" class="logo-img">
       <h2>Frontend Health Checker</h2>
     </div>
 
@@ -25,12 +25,13 @@
     </nav>
 
     <a href="https://github.com/harshitgargcodes/Frontend-Health-Checker" target="_blank" rel="noopener noreferrer" class="github-button">
-      <img src="assets/github-logo.png" alt="GitHub Logo" class="github-img">
+      <img src="github-logo.png" alt="GitHub Logo" class="github-img">
       <span>GitHub</span>
     </a>
   </header>
 
   <main>
+
     <section class="head">
       <div>
         <h1>Check if your HTML and CSS project is client-ready.</h1>
@@ -42,121 +43,173 @@
         <span>HTML & CSS Checker</span>
       </div>
 
-        <div class="checks">
-          <span>
-           <img src="assets/best-practices-logo.png" alt="" class="check-icon">
-            Best Practices
-          </span>
-
-          <span>
-           <img src="assets/performance-logo.png" alt="" class="check-icon">
-            Performance
-         </span>
-
-         <span>
-          <img src="assets/accessibility-logo.png" alt="" class="check-icon">
-           Accessibility
-         </span>
+      <div class="checks">
+        <span>
+          <img src="best-practices-logo.png" alt="" class="check-icon">
+          Best Practices
+        </span>
 
         <span>
-         <img src="assets/code-quality-logo.png" alt="" class="check-icon">
-         Code Quality
-       </span>
-     </div>
+          <img src="performance-logo.png" alt="" class="check-icon">
+          Performance
+        </span>
+
+        <span>
+          <img src="accessibility-logo.png" alt="" class="check-icon">
+          Accessibility
+        </span>
+
+        <span>
+          <img src="code-quality-logo.png" alt="" class="check-icon">
+          Code Quality
+        </span>
+      </div>
     </section>
 
     <section class="input-box">
-  <div class="html-input">
-    <div class="input-title">
-      <img src="assets/html-logo.png" alt="HTML logo" class="input-logo">
-      <label for="html-code">HTML</label>
-    </div>
+      <div class="html-input">
+        <div class="input-title">
+          <img src="html-logo.png" alt="HTML logo" class="input-logo">
+          <label for="html-code">HTML</label>
+        </div>
 
-    <textarea id="html-code" placeholder="Enter your HTML code here"></textarea>
-  </div>
+        <textarea id="html-code" placeholder="Enter your HTML code here"></textarea>
+      </div>
 
-  <div class="css-input">
-    <div class="input-title">
-      <img src="assets/css-logo.png" alt="CSS logo" class="input-logo">
-      <label for="css-code">CSS</label>
-    </div>
+      <div class="css-input">
+        <div class="input-title">
+          <img src="css-logo.png" alt="CSS logo" class="input-logo">
+          <label for="css-code">CSS</label>
+        </div>
 
-    <textarea id="css-code" placeholder="Enter your CSS code here"></textarea>
-  </div>
+        <textarea id="css-code" placeholder="Enter your CSS code here"></textarea>
+      </div>
 
-  <div>
-    <button type="button" class="health-check">Run Health Check</button>
-    <button type="button" class="sample">Load Sample</button>
+      <div>
+        <button type="button" class="health-check">Run Health Check</button>
+        <button type="button" class="sample">Load Sample</button>
 
-    <p>Your code is checked locally in this page and is not uploaded.</p>
-  </div>
-</section>
+        <p>Your code is checked locally in this page and is not uploaded.</p>
+      </div>
+    </section>
 
-    <aside class="results-page">
+    <section class="pdf-report">
+      <aside class="results-page">
         <h3>Results</h3>
+
         <h2 class="total-score"></h2>
         <span>/100</span>
-          
+
         <div>
-           <h4 class="statusTitle"></h4>
+          <h4 class="statusTitle"></h4>
           <p class="statusMessage"></p>
         </div>
 
-          <h3>Issues Found</h3>
-          <h3 class="total-issues"></h3>
+        <h3>Issues Found</h3>
+        <h3 class="total-issues"></h3>
 
-          <details>
+        <details>
+          <summary>
+            <span>View Full Report</span>
+            <span class="total-issues"></span>
+            <span>Issues Found</span>
+          </summary>
 
-            <summary>
-              <span>View Full Report</span>
-              <span class="total-issues"></span>
-              <span>Issues Found</span>
-            </summary>
+          <div class="issue-details"></div>
+        </details>
 
-            <div class="issue-details">
-
-            </div>
-
-          </details>
-
+        <div class="report-actions">
           <button type="button" class="copy-report">Copy Report</button>
-          <p class="copy-status"></p>
-    </aside>
+          <button type="button" class="download-pdf">Download PDF Report</button>
+        </div>
+
+        <p class="copy-status"></p>
+      </aside>
+    </section>
 
     <section class="separate-result">
-  <div class="best-practice-score">
-    <img src="assets/best-practices-logo.png" alt="" class="score-icon">
-    <div>
-      <h4>Best Practices</h4>
-      <p></p>
-    </div>
-  </div>
+      <div class="best-practice-score">
+        <img src="best-practices-logo.png" alt="" class="score-icon">
+        <div>
+          <h4>Best Practices</h4>
+          <p></p>
+        </div>
+      </div>
 
-  <div class="performance-score">
-    <img src="assets/performance-logo.png" alt="" class="score-icon">
-    <div>
-      <h4>Performance</h4>
-      <p></p>
-    </div>
-  </div>
+      <div class="performance-score">
+        <img src="performance-logo.png" alt="" class="score-icon">
+        <div>
+          <h4>Performance</h4>
+          <p></p>
+        </div>
+      </div>
 
-  <div class="accessibility-score">
-    <img src="assets/accessibility-logo.png" alt="" class="score-icon">
-    <div>
-      <h4>Accessibility</h4>
-      <p></p>
-    </div>
-  </div>
+      <div class="accessibility-score">
+        <img src="accessibility-logo.png" alt="" class="score-icon">
+        <div>
+          <h4>Accessibility</h4>
+          <p></p>
+        </div>
+      </div>
 
-  <div class="code-quality-score">
-    <img src="assets/code-quality-logo.png" alt="" class="score-icon">
-    <div>
-      <h4>Code Quality</h4>
-      <p></p>
+      <div class="code-quality-score">
+        <img src="code-quality-logo.png" alt="" class="score-icon">
+        <div>
+          <h4>Code Quality</h4>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pdf-only-report">
+  <div class="pdf-report-card">
+
+    <h2>Frontend Health Checker Report</h2>
+
+    <div class="pdf-total-box">
+      <h3>Total Score</h3>
+      <p><span class="pdf-total-score"></span><span>/100</span></p>
+      <h4 class="pdf-status-title"></h4>
+      <p class="pdf-status-message"></p>
     </div>
+
+    <div class="pdf-score-grid">
+      <div>
+        <h4>Best Practices</h4>
+        <p class="pdf-best-practices-score"></p>
+      </div>
+
+      <div>
+        <h4>Performance</h4>
+        <p class="pdf-performance-score"></p>
+      </div>
+
+      <div>
+        <h4>Accessibility</h4>
+        <p class="pdf-accessibility-score"></p>
+      </div>
+
+      <div>
+        <h4>Code Quality</h4>
+        <p class="pdf-code-quality-score"></p>
+      </div>
+    </div>
+
+    <div class="pdf-issues-dropdown">
+      <div class="pdf-dropdown-header">
+        <span>View Full Report</span>
+        <span><span class="pdf-total-issues"></span> Issues Found</span>
+      </div>
+
+      <div class="pdf-issue-details"></div>
+    </div>
+
   </div>
 </section>
+
   </main>
-<script src="script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
